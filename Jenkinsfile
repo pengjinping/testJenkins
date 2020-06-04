@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('构建') {
         steps {
-            echo 'Building..${branch}'
+            echo 'Building..${branch} $branch '
         }
     }
     stage('测试') {
