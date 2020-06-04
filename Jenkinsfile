@@ -14,7 +14,7 @@ pipeline {
     stage('测试') {
         steps {
             echo 'Testing..'
-            sh "echo composer --version"
+            sh "composer --version"
         }
     }
     stage('发布') {
