@@ -1,5 +1,8 @@
 #!/usr/bin/env groovy
 pipeline {
+  environment{
+     branch=sh(returnStdout:true,script: 'echo $branch').trim()
+  }
   agent any
 
   stages {
