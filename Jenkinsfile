@@ -5,12 +5,12 @@ pipeline {
   stages {
     stage('构建') {
         steps {
-            echo 'Building..$(branch)'
+            echo 'Building..${branch}'
         }
     }
     stage('测试') {
         steps {
-            echo 'Testing..'
+            echo 'Testing.. ${branch1}'
         }
     }
     stage('发布') {
