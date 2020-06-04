@@ -3,9 +3,7 @@ pipeline {
   environment {
      BRANCH = sh(returnStdout:true,script: 'echo $branch').trim()
   } 
-  agent { 
-    docker 'php' 
-  }
+  agent any
 
   stages {
     stage('构建') {
@@ -16,7 +14,7 @@ pipeline {
     stage('测试') {
         steps {
             echo 'Testing..'
-            sh "composer --version"
+            sh "echo composer --version"
         }
     }
     stage('发布') {
