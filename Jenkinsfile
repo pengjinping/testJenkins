@@ -1,14 +1,14 @@
 #!/usr/bin/env groovy
 pipeline {
   environment{
-     branch=sh(returnStdout:true,script: 'echo $branch').trim()
+     BRANCH1 = sh(returnStdout:true,script: 'echo $branch').trim()
   }
   agent any
 
   stages {
     stage('构建') {
         steps {
-            echo 'Building..${branch} $branch '
+            echo 'Building..${branch} $BRANCH1'
         }
     }
     stage('测试') {
