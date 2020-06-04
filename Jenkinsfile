@@ -3,7 +3,7 @@ pipeline {
   environment {
      BRANCH = sh(returnStdout:true,script: 'echo $branch').trim()
   } 
-  agent any
+  agent { docker 'php' }
 
   stages {
     stage('构建') {
