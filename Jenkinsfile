@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('构建') {
         steps {
-            sh "Buliding $BRANCH"
+            sh "echo 'Buliding $BRANCH'"
         }
     }
     stage('测试') {
